@@ -62,8 +62,4 @@ const FormPage = () => {
   );
 };
 
-// <form onSubmit={form.handleSubmit(onSubmit)}>
-//   <input {...register("name")} type="text" className="border p-2" />
-//   <button type="submit">Submit</button>
-// </form>
 export default FormPage;
