@@ -24,7 +24,7 @@ export async function POST(request: Request) {
 }
 
 export async function GET() {
-    const wine = await prismadb.wine.findMany()
+    const wines = await prismadb.wine.findMany()
 
-    return NextResponse.json(wine)
+    return NextResponse.json(wines)
 }

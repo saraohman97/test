@@ -1,9 +1,8 @@
+import getWines from "@/actions/getWines";
 import Form from "@/components/formpage";
-import prismadb from "@/lib/prismadb";
 
 export default async function Home() {
-  const wines = await prismadb.wine.findMany()
-  console.log(wines)
+  const wines = await getWines()
 
   return (
     <div className="p-20">
@@ -11,7 +10,7 @@ export default async function Home() {
         wines?.map((wine) => <div key={wine.id}>{wine.name}</div>)
       ) : (
         <div>Inga viner</div>
-      )}{" "}
+      )}
       <br /> <br />
       <Form />
     </div>
